@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoVerse | AI Classifier</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+<h1>TEST PAGE LOADED</h1>
+<section class="classifier-page">
+
+    <h1>AI Music Genre Classifier</h1>
+
+    <p>Upload an audio file and let EchoVerse identify its genre.</p>
+
+    <div class="classifier-box">
+
+        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+        <input type="file" id="audioFile" accept=".mp3,.wav">
+
+       <button type="button"
+       id="predictBtn">Predict Genre</button>
+
+<div id="result" class="result-box">
+    Upload a music file and click Predict Genre.
+</div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
