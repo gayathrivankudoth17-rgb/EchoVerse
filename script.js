@@ -69,15 +69,24 @@ const coverImage = document.getElementById("coverImage");
 const songTitle = document.getElementById("songTitle");
 const playBtn = document.getElementById("playBtn");
 
+
 function playSong(audio, title, image) {
+
+    console.log("Playing:", audio);
 
     audioPlayer.src = audio;
     coverImage.src = image;
     songTitle.textContent = title;
 
-    audioPlayer.play();
-
-    playBtn.textContent = "⏸️";
+    audioPlayer.play()
+        .then(() => {
+            console.log("Song started");
+            playBtn.textContent = "⏸️";
+        })
+        .catch(err => {
+            console.error("Audio Error:", err);
+            alert("Cannot play audio. Check the console.");
+        });
 }
 
 function togglePlay() {
